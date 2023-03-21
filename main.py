@@ -30,12 +30,14 @@ class Storage(ABC):
 
 class Store(Storage):
     def __init__(self, items):
+        super().__init__(items)
         self._items = items
         self.capacity = 100
 
 
 class Shop(Storage):
     def __init__(self, items):
+        super().__init__(items)
         self._items = items
         self.capacity = 20
 
